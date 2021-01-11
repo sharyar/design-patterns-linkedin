@@ -18,7 +18,7 @@ class Subject(object):
         for observer in self._observers:
             # Only notify an observer if it isnt the one updating the subject. 
             if modifier != observer:
-                observer.update()
+                observer.update(self)
                 
 class Core(Subject):
     
